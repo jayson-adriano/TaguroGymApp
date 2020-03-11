@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <title>Main</title>
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/index.css" rel="stylesheet">
+    <!--<script src="assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+</head>
+<body onload="GetCourses()">
+    <div class="navbar-wrapper">
+        <div class="container">
+
+            <nav class="navbar navbar-inverse navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="Main.html">Taguro Gym App</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="Main.html">Home</a></li>
+                            <li><a href="About.html">About</a></li>
+                            <li><a href="Contact.html">Contact</a></li>
+                            <li><a href="index.html">Logout</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+    </div>
+    <h1>Pay Enrollment</h1><br />
+    <output id="lblCourses2">COURSES: </output> <!--GetCoursePrice-->
+    <output id="lblCourses">--</output>
+    <br />
+    <output id="lblTotal2">TOTAL: </output>   <!--ComputeTotal-->
+    <output id="lblTotal">--</output>
+    <br />
+    <output id="lblDiscount2">DISCOUNT: </output> <!--CheckIfDiscounted-->
+    <output id="lblDiscount">--</output>
+    <br />
+    <output id="lblGrand2">GRAND TOTAL: </output> <!--ComputeDiscounted-->
+    <output id="lblGrand">--</output>
+    <br />
+    <output id="lblMode2">MODE OF PAYMENT: </output>
+    <select id="chooseModeOfPayment" onchange="PaymentMode(this.value)">
+        <option value="" disabled selected style="color:black">Select mode</option>
+        <option value="Gym" style="color:black">Gym</option>
+        <option value="Credit" style="color:black">Credit Card</option>
+    </select>
+    <br />
+    <br />
+    <output id="lblMode" style="visibility: hidden">Take a screenshot of this page and show to the cashier. </output>
+    <br />
+    <output id="lblCredit" style="visibility: hidden">CREDIT CARD NUMBER: </output>
+    <input id="CreditCard" name="credit" required="required" type="text" placeholder="" style="visibility: hidden" />
+    <br />
+    <br />
+    <input id="btnConfirmPayment" type="button" class="btn btn-lg btn-primary btn-block" value="Confirm Payment" onclick="FinalizePayment()" style="visibility: hidden" />
+    <input type="button" class="btn btn-lg btn-primary btn-block" value="Cancel" onclick="location.href = 'Main.html'" />
+    <input type="button" class="btn btn-lg btn-primary btn-block" value="Back" onclick="location.href = 'SelectClass.html'" />
+
+
+    <script src="jquery-1.11.3.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <!--<script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
+    <script src="scripts/func.js" type="text/javascript"></script>
+</body>
+</html>

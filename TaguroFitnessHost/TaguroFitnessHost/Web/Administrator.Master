@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Administrator.master.cs" Inherits="TaguroFitnessHost.WebForms.Administrator" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>TAGURO FITNESS - ADMIN</title>
+    <link rel="stylesheet" href="jAlert-master/src/jAlert-v3.css" />
+</head>
+
+<body>
+    <link href="../css/admin.css" rel="stylesheet" />
+    <link href="../css/jAlert-v3.css" rel="stylesheet" />
+    <script src="../js/jquery-latest.min.js"></script>
+  
+        <div id='cssmenu'>
+            <ul>
+                <li class='active'><a href='admin.aspx'><span>Taguro Fitness</span></a></li>               
+                <li class='has-sub'><a href="#">Instructors</a>
+                    <ul>
+                        <li><a href="../Web/AddInstructor.aspx">Add Instructor</a></li>
+                        <li class='last'><a href="../Web/AssignCourse.aspx">Assign Course</a></li>
+                    </ul>
+                </li>
+                <li class='has-sub'><a href="#">Courses</a>
+                    <ul>
+                        <li><a href="AddCourse.aspx">Add Course</a></li>
+                        <li class='last'><a href="../Web/RemoveCourse.aspx">Remove Course</a></li>
+                    </ul>
+                </li>
+                <li class='has-sub'><a href="#">Payments</a>
+                    <ul>
+                        <li class='last'><a href="../Web/ConfirmPayments.aspx">Confirm Payments</a></li>
+                    </ul>
+                </li>
+                <li class='has-sub'><a href="#">Inventory</a>
+                    <ul>
+                        <li class='last'><a href="../Web/Inventory.aspx">View Inventory</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Web/LogOut.aspx">[ Log out ]</a></li>
+
+            </ul>
+
+        </div>
+ 
+    <form id="bodyform" runat="server">
+                 
+    <asp:ContentPlaceHolder ID="siteBody" runat="server">
+          
+    </asp:ContentPlaceHolder>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/Tagurooo/Service.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/Tagurooo/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/Tagurooo/Service.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost/Tagurooo/Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_hello_InputMessage">
+    <wsdl:part name="parameters" element="tns:hello" />
+  </wsdl:message>
+  <wsdl:message name="IService_hello_OutputMessage">
+    <wsdl:part name="parameters" element="tns:helloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_LogIn_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogIn" />
+  </wsdl:message>
+  <wsdl:message name="IService_LogIn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogInResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_Register_InputMessage">
+    <wsdl:part name="parameters" element="tns:Register" />
+  </wsdl:message>
+  <wsdl:message name="IService_Register_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ShowCourseByTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowCourseByTime" />
+  </wsdl:message>
+  <wsdl:message name="IService_ShowCourseByTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowCourseByTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ShowCourseDescriptionAndPrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowCourseDescriptionAndPrice" />
+  </wsdl:message>
+  <wsdl:message name="IService_ShowCourseDescriptionAndPrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowCourseDescriptionAndPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ShowCourseByInstructor_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowCourseByInstructor" />
+  </wsdl:message>
+  <wsdl:message name="IService_ShowCourseByInstructor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowCourseByInstructorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ShowInstructors_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowInstructors" />
+  </wsdl:message>
+  <wsdl:message name="IService_ShowInstructors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowInstructorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddCourseToSched_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCourseToSched" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddCourseToSched_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCourseToSchedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_getCustomerID_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCustomerID" />
+  </wsdl:message>
+  <wsdl:message name="IService_getCustomerID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCustomerIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_BindEnrollSched_InputMessage">
+    <wsdl:part name="parameters" element="tns:BindEnrollSched" />
+  </wsdl:message>
+  <wsdl:message name="IService_BindEnrollSched_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BindEnrollSchedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ViewCustomerProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewCustomerProfile" />
+  </wsdl:message>
+  <wsdl:message name="IService_ViewCustomerProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewCustomerProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ViewCustomerSchedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewCustomerSchedule" />
+  </wsdl:message>
+  <wsdl:message name="IService_ViewCustomerSchedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewCustomerScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ComputeTotal_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComputeTotal" />
+  </wsdl:message>
+  <wsdl:message name="IService_ComputeTotal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComputeTotalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_CheckIfDiscounted_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckIfDiscounted" />
+  </wsdl:message>
+  <wsdl:message name="IService_CheckIfDiscounted_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckIfDiscountedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ComputeDiscounted_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComputeDiscounted" />
+  </wsdl:message>
+  <wsdl:message name="IService_ComputeDiscounted_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComputeDiscountedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetCoursePrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCoursePrice" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetCoursePrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCoursePriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateInventoryCredit_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInventoryCredit" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateInventoryCredit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInventoryCreditResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateInventoryGym_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInventoryGym" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateInventoryGym_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInventoryGymResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ViewInventory_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewInventory" />
+  </wsdl:message>
+  <wsdl:message name="IService_ViewInventory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewInventoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetQuizQuestions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuizQuestions" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetQuizQuestions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuizQuestionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_PromoAvailed_InputMessage">
+    <wsdl:part name="parameters" element="tns:PromoAvailed" />
+  </wsdl:message>
+  <wsdl:message name="IService_PromoAvailed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PromoAvailedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SubmitFeedback_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitFeedback" />
+  </wsdl:message>
+  <wsdl:message name="IService_SubmitFeedback_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitFeedbackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetRandomFeedback_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRandomFeedback" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetRandomFeedback_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRandomFeedbackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_EditProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditProfile" />
+  </wsdl:message>
+  <wsdl:message name="IService_EditProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ClearSchedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClearSchedule" />
+  </wsdl:message>
+  <wsdl:message name="IService_ClearSchedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClearScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_logInAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:logInAdmin" />
+  </wsdl:message>
+  <wsdl:message name="IService_logInAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:logInAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddCourse_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCourse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddCourse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddInstructor_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddInstructor" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddInstructor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddInstructorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_getInstructorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:getInstructorID" />
+  </wsdl:message>
+  <wsdl:message name="IService_getInstructorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getInstructorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AdminPopulateSchedTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdminPopulateSchedTable" />
+  </wsdl:message>
+  <wsdl:message name="IService_AdminPopulateSchedTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdminPopulateSchedTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ViewCourses_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewCourses" />
+  </wsdl:message>
+  <wsdl:message name="IService_ViewCourses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewCoursesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_RemoveCourse_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCourse" />
+  </wsdl:message>
+  <wsdl:message name="IService_RemoveCourse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ViewPaymentRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewPaymentRequest" />
+  </wsdl:message>
+  <wsdl:message name="IService_ViewPaymentRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewPaymentRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_EditPaymentStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditPaymentStatus" />
+  </wsdl:message>
+  <wsdl:message name="IService_EditPaymentStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditPaymentStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ViewInventoryAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewInventoryAdmin" />
+  </wsdl:message>
+  <wsdl:message name="IService_ViewInventoryAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewInventoryAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ViewAvailableCourses_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewAvailableCourses" />
+  </wsdl:message>
+  <wsdl:message name="IService_ViewAvailableCourses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewAvailableCoursesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ChooseCourse_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChooseCourse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ChooseCourse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChooseCourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ViewAvailableInstructors_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewAvailableInstructors" />
+  </wsdl:message>
+  <wsdl:message name="IService_ViewAvailableInstructors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewAvailableInstructorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AssignCourse_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssignCourse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AssignCourse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssignCourseResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService">
+    <wsdl:operation name="hello">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/hello" message="tns:IService_hello_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/helloResponse" message="tns:IService_hello_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogIn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/LogIn" message="tns:IService_LogIn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/LogInResponse" message="tns:IService_LogIn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/Register" message="tns:IService_Register_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/RegisterResponse" message="tns:IService_Register_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowCourseByTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ShowCourseByTime" message="tns:IService_ShowCourseByTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ShowCourseByTimeResponse" message="tns:IService_ShowCourseByTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowCourseDescriptionAndPrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ShowCourseDescriptionAndPrice" message="tns:IService_ShowCourseDescriptionAndPrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ShowCourseDescriptionAndPriceResponse" message="tns:IService_ShowCourseDescriptionAndPrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowCourseByInstructor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ShowCourseByInstructor" message="tns:IService_ShowCourseByInstructor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ShowCourseByInstructorResponse" message="tns:IService_ShowCourseByInstructor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowInstructors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ShowInstructors" message="tns:IService_ShowInstructors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ShowInstructorsResponse" message="tns:IService_ShowInstructors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCourseToSched">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/AddCourseToSched" message="tns:IService_AddCourseToSched_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AddCourseToSchedResponse" message="tns:IService_AddCourseToSched_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/getCustomerID" message="tns:IService_getCustomerID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/getCustomerIDResponse" message="tns:IService_getCustomerID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BindEnrollSched">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/BindEnrollSched" message="tns:IService_BindEnrollSched_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/BindEnrollSchedResponse" message="tns:IService_BindEnrollSched_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewCustomerProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ViewCustomerProfile" message="tns:IService_ViewCustomerProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ViewCustomerProfileResponse" message="tns:IService_ViewCustomerProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewCustomerSchedule">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ViewCustomerSchedule" message="tns:IService_ViewCustomerSchedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ViewCustomerScheduleResponse" message="tns:IService_ViewCustomerSchedule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComputeTotal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ComputeTotal" message="tns:IService_ComputeTotal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ComputeTotalResponse" message="tns:IService_ComputeTotal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckIfDiscounted">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/CheckIfDiscounted" message="tns:IService_CheckIfDiscounted_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/CheckIfDiscountedResponse" message="tns:IService_CheckIfDiscounted_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComputeDiscounted">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ComputeDiscounted" message="tns:IService_ComputeDiscounted_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ComputeDiscountedResponse" message="tns:IService_ComputeDiscounted_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoursePrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetCoursePrice" message="tns:IService_GetCoursePrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetCoursePriceResponse" message="tns:IService_GetCoursePrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInventoryCredit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateInventoryCredit" message="tns:IService_UpdateInventoryCredit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateInventoryCreditResponse" message="tns:IService_UpdateInventoryCredit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInventoryGym">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateInventoryGym" message="tns:IService_UpdateInventoryGym_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateInventoryGymResponse" message="tns:IService_UpdateInventoryGym_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewInventory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ViewInventory" message="tns:IService_ViewInventory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ViewInventoryResponse" message="tns:IService_ViewInventory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuizQuestions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetQuizQuestions" message="tns:IService_GetQuizQuestions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetQuizQuestionsResponse" message="tns:IService_GetQuizQuestions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PromoAvailed">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/PromoAvailed" message="tns:IService_PromoAvailed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/PromoAvailedResponse" message="tns:IService_PromoAvailed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitFeedback">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SubmitFeedback" message="tns:IService_SubmitFeedback_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SubmitFeedbackResponse" message="tns:IService_SubmitFeedback_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRandomFeedback">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetRandomFeedback" message="tns:IService_GetRandomFeedback_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetRandomFeedbackResponse" message="tns:IService_GetRandomFeedback_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/EditProfile" message="tns:IService_EditProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/EditProfileResponse" message="tns:IService_EditProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearSchedule">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ClearSchedule" message="tns:IService_ClearSchedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ClearScheduleResponse" message="tns:IService_ClearSchedule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="logInAdmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/logInAdmin" message="tns:IService_logInAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/logInAdminResponse" message="tns:IService_logInAdmin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCourse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/AddCourse" message="tns:IService_AddCourse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AddCourseResponse" message="tns:IService_AddCourse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddInstructor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/AddInstructor" message="tns:IService_AddInstructor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AddInstructorResponse" message="tns:IService_AddInstructor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getInstructorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/getInstructorID" message="tns:IService_getInstructorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/getInstructorIDResponse" message="tns:IService_getInstructorID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AdminPopulateSchedTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/AdminPopulateSchedTable" message="tns:IService_AdminPopulateSchedTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AdminPopulateSchedTableResponse" message="tns:IService_AdminPopulateSchedTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewCourses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ViewCourses" message="tns:IService_ViewCourses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ViewCoursesResponse" message="tns:IService_ViewCourses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCourse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/RemoveCourse" message="tns:IService_RemoveCourse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/RemoveCourseResponse" message="tns:IService_RemoveCourse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewPaymentRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ViewPaymentRequest" message="tns:IService_ViewPaymentRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ViewPaymentRequestResponse" message="tns:IService_ViewPaymentRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditPaymentStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/EditPaymentStatus" message="tns:IService_EditPaymentStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/EditPaymentStatusResponse" message="tns:IService_EditPaymentStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewInventoryAdmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ViewInventoryAdmin" message="tns:IService_ViewInventoryAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ViewInventoryAdminResponse" message="tns:IService_ViewInventoryAdmin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewAvailableCourses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ViewAvailableCourses" message="tns:IService_ViewAvailableCourses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ViewAvailableCoursesResponse" message="tns:IService_ViewAvailableCourses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChooseCourse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ChooseCourse" message="tns:IService_ChooseCourse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ChooseCourseResponse" message="tns:IService_ChooseCourse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewAvailableInstructors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ViewAvailableInstructors" message="tns:IService_ViewAvailableInstructors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ViewAvailableInstructorsResponse" message="tns:IService_ViewAvailableInstructors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignCourse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/AssignCourse" message="tns:IService_AssignCourse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AssignCourseResponse" message="tns:IService_AssignCourse_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="Service" />
+</wsdl:definitions>

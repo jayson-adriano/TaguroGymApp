@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaguroFitnessHost", "TaguroFitnessHost\TaguroFitnessHost.csproj", "{66CA8341-464D-41D2-9CCD-59A3D523DB53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "admin", "admin\admin.csproj", "{5ED11D1F-B2EC-4D33-AD25-263CECD7BE24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66CA8341-464D-41D2-9CCD-59A3D523DB53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66CA8341-464D-41D2-9CCD-59A3D523DB53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66CA8341-464D-41D2-9CCD-59A3D523DB53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66CA8341-464D-41D2-9CCD-59A3D523DB53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ED11D1F-B2EC-4D33-AD25-263CECD7BE24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ED11D1F-B2EC-4D33-AD25-263CECD7BE24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ED11D1F-B2EC-4D33-AD25-263CECD7BE24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ED11D1F-B2EC-4D33-AD25-263CECD7BE24}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>http://localhost/TaguroHost</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bg.png">
+      <publishTime>04/09/2016 10:15:35</publishTime>
+    </File>
+    <File Include="bin/admin.dll">
+      <publishTime>04/09/2016 11:52:29</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>12/31/2015 09:30:01</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/TaguroFitnessHost.dll">
+      <publishTime>04/13/2016 10:58:29</publishTime>
+    </File>
+    <File Include="css/admin.css">
+      <publishTime>04/13/2016 10:55:31</publishTime>
+    </File>
+    <File Include="css/jAlert-v3.css">
+      <publishTime>04/13/2016 10:55:39</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>12/31/2015 09:29:59</publishTime>
+    </File>
+    <File Include="Home.aspx">
+      <publishTime>12/31/2015 10:18:29</publishTime>
+    </File>
+    <File Include="LogIn.aspx">
+      <publishTime>04/09/2016 10:22:40</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>12/31/2015 09:57:54</publishTime>
+    </File>
+    <File Include="Properties/DataSources/System.Data.DataTable.datasource">
+      <publishTime>04/09/2016 11:42:19</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/09/2016 11:52:34</publishTime>
+    </File>
+    <File Include="Web/AddCourse.aspx">
+      <publishTime>04/08/2016 11:28:33</publishTime>
+    </File>
+    <File Include="Web/AddInstructor.aspx">
+      <publishTime>04/08/2016 12:07:29</publishTime>
+    </File>
+    <File Include="Web/Administrator.Master">
+      <publishTime>04/13/2016 11:02:49</publishTime>
+    </File>
+    <File Include="Web/AssignCourse.aspx">
+      <publishTime>01/15/2016 12:11:54</publishTime>
+    </File>
+    <File Include="Web/ConfirmPayments.aspx">
+      <publishTime>01/03/2016 14:05:16</publishTime>
+    </File>
+    <File Include="Web/Home.aspx">
+      <publishTime>12/31/2015 10:18:29</publishTime>
+    </File>
+    <File Include="Web/Inventory.aspx">
+      <publishTime>12/31/2015 10:54:39</publishTime>
+    </File>
+    <File Include="Web/LogIn.aspx">
+      <publishTime>04/09/2016 12:54:36</publishTime>
+    </File>
+    <File Include="Web/LogOut.aspx">
+      <publishTime>12/31/2015 18:52:10</publishTime>
+    </File>
+    <File Include="Web/RemoveCourse.aspx">
+      <publishTime>01/15/2016 11:42:34</publishTime>
+    </File>
+    <File Include="Web/SessionExpired.aspx">
+      <publishTime>12/31/2015 15:06:10</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
